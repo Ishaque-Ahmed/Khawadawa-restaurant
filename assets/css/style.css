@@ -1,0 +1,416 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+.container{
+	width:1170px;
+	margin:0 auto;
+}
+.row{
+	margin:0 -15px;
+}
+.row:before, .row:after{
+	display:table;
+	clear:both;
+	content:"";
+}
+.col-1{
+	width:8.33%;
+}
+.col-2{
+	width:16.67%;
+}
+.col-3{
+	width:25%;
+}
+.col-4{
+	width:33.33%;
+}
+.col-5{
+	width:41.67%;
+}
+.col-6{
+	width:50%;
+}
+.col-7{
+	width:58.33%;
+}
+.col-8{
+	width:66.67%;
+}
+.col-9{
+	width:75%;
+}
+.col-10{
+	width:83.33%;
+}
+.col-11{
+	width:91.67%;
+}
+.col-12{
+	width:100%;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+	float:left;
+	padding:0 15px;
+}
+/*Common CSS Code*/
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+html,body{
+	height:100%;
+}
+.img{
+	max-width:100%;
+}
+.text-right{
+	text-align:right;
+}
+.text-center{
+	text-align:center;
+}
+.bg{
+	background-size:cover;
+	background-position:center;
+	position:relative;
+	z-index:2;
+}
+.bg-overlay:before{
+	position:absolute;
+	content:"";
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background-color:black;
+	opacity:.7;
+	z-index:-1;
+}
+/* Common Padding & Margin*/
+.pt-80{
+	padding-top:80px;
+}
+.pb-80{
+	padding-bottom:80px;
+}
+.mb-50{
+	margin-bottom:50px;
+}
+/*Button CSS*/
+.box-btn {
+	display: inline-block;
+    background-color: #c65410;
+    color: #fff;
+    padding: 10px 30px;
+    text-transform: capitalize;
+    position:relative;
+    z-index:2;
+    overflow:hidden;
+}
+.box-btn:before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  left: 0;
+  top: -100%;
+  z-index:-1;
+  transition:.3s;
+	
+}
+.box-btn:hover:before{
+	top:0;
+}
+/* Welcome CSS*/
+.welcome-area{
+	background-image:url("../img/slide-1.jpg");
+	height:100%;
+}
+.welcome-content {
+  text-align:center;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.welcome-content h4{
+	font-size:35px;
+}
+.welcome-content h2{
+	text-transform:uppercase;
+	font-size:55px;
+	margin:10px 0;
+}
+.welcome-content a{
+	margin:0 10px;
+}
+
+/* Header CSS*/
+.menu ul li {
+  display: inline-block;
+  position: relative;
+}
+.menu ul li a {
+  display: block;
+  font-size: 20px;
+  padding: 15px 20px;
+}
+.logo img {
+  margin-top: 8px;
+}
+.header-fixed{
+	position:absolute;
+	left:0;
+	right:0;
+	z-index:3;
+}
+.header-fixed a{
+	color:#fff;
+}
+
+/*Section-title CSS*/
+.section-title h4 {
+  font-size: 40px;
+  color: #f47404;
+  position: relative;
+  padding-bottom: 15px;
+  display: inline-block;
+}
+.section-title h4::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: orange;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section-title h4::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: orange;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*About CSS*/
+.about-gallery {
+  position: relative;
+}
+.about-gallery img {
+	border: 1px solid #ddd;
+	padding: 3px;
+	width: 100%;
+}
+.about-gallery img:nth-child(2){
+	position:absolute;
+	top: 100px;
+    left:110px;
+}
+.about-text a{
+	margin-top:50px;
+}
+
+/*Food area CSS*/
+.foodbox{
+	position:relative;
+	padding-left: 125px;
+    margin-bottom: 65px;
+}
+.foodbox img{
+	max-width:100px;
+	border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition:.3s;
+}
+.foodbox h4 {
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #ddd;
+  padding-bottom: 10px;
+}
+.foodbox:hover h4{
+	color:red;
+}
+.foodbox:hover img{
+	border-radius:0;
+    max-width: 110px;
+}
+.foodbox h4 span{
+	float: right;
+	color: tomato;
+	font-style: italic;
+}
+
+/*Disscount CSS*/
+.discount-area{
+	background-image:url("../img/slide-1.jpg");
+	height:220px;
+}
+.disscount{
+	position:absolute;
+	color:white;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+.disscount p{
+  font-size: 20px;
+  padding-left: 130px;
+  padding-bottom: 5px;
+}
+.disscount h4{
+  font-size: 35px;
+}
+.disscount h4 span{
+  color: tomato;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+/*Special-menu CSS*/
+.single-special img{
+	border:2px solid gray;
+	padding:3px;
+	margin-bottom:10px;
+	width: 100%;
+}
+.single-special ul li {
+  font-size: 15px;
+}
+.single-special span {
+	float: right;
+	color: tomato;
+	font-style: italic;
+}
+.single-special ul li.special-border {
+  border-top: 1px dashed black;
+  padding-top: 10px;
+}
+
+/*Gallery CSS*/
+.single-gallery {
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.single-gallery img{
+	width:100%;
+	cursor:crosshair;
+}
+.single-gallery:before{
+	content:"";
+	position:absolute;
+	width:50%;
+	height:100%;
+	left:-100%;
+	top:0;
+	background-color:black;
+	opacity:.5;
+	transition:.3s
+}
+.single-gallery:after{
+	content:"";
+	position:absolute;
+	width:50%;
+	height:100%;
+	right:-100%;
+	top:0;
+	background-color:black;
+	opacity:.5;
+	transition:.3s
+}
+.single-gallery:hover:before{
+	left:0;
+}
+.single-gallery:hover:after{
+	right:0;
+}
+
+/*Blog CSS*/
+.single-blog{
+	margin-top:25px;
+	transition:.3s;
+}
+.single-blog:hover{
+	box-shadow:4px -12px 25px gray;
+}
+.single-blog img{
+	width:100%;
+	border:2px solid gray;
+}
+.single-blog ul{
+	text-align:center;
+}
+.single-blog ul li{
+	display:inline-block;
+}
+.single-blog ul li a{
+	display:block;
+	padding:10px;
+	color:gray;
+}
+.single-blog h4 {
+  text-transform: capitalize;
+  font-size: 20px;
+  padding: 5px 0;
+}
+.box-trans {
+  padding: 15px 0;
+  color:tomato;
+  font-size:15px;
+  font-weight:bold;
+  text-transform:capitalize;
+}
+
+/*Footer CSS*/
+.footer-area{
+	background-image:url("../img/slide-1.jpg");
+}
+.single-footer{
+	margin-right:20px;
+	color:white;
+}
+.single-footer img{
+	padding-top:100px;
+}
+.single-footer h4 {
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.single-footer ul li {
+	border-bottom: .5px solid white;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+.single-footer ul li:last-child{
+	border-bottom:0;
+}
+.single-footer ul li a{
+	color:white;
+}
+
+
+a{
+	transition:.3s;
+	-webkit-transition:.3s; /* Chrome & Safari */
+	-o-transition:.3s; /* Opera Mini */
+	-moz-transition:.3s; /* Mozilla Firefox */
+	-ms-transition:3s; /* Explorer */
+}
